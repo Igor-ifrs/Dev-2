@@ -1,0 +1,14 @@
+*{box-sizing: border-box}
+
+input[type=text]:disabled {
+    color: deeppink;
+    opacity: 1;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background: aquamarine;
+}
+#map{
+    height: 100%;
+}

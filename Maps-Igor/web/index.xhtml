@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputScript library="js" name="cep.js"/>        
+        <h:outputStylesheet library="css" name="css.css"/>
+
+    </h:head>
+
+
+    <h:body>
+        <h4 style="text-align: center">Demostração  MAPA exemplo 1 "JQUERY"</h4>
+        <div style="margin: auto; width: 60%;border:4px ridge deeppink;padding: 20px;border-radius: 10px">
+            <div align="center">
+                <h:form prependId="false">
+                    <h:panelGrid columns="2">
+
+                        <h:outputText value="CEP-"/>
+                        <h:panelGroup>
+                            <p:inputMask mask="99999999" id="cep" size="15" />
+                            <p:commandButton value="Busca Endereço" style="font-size: 14px;"/>                        
+                            <p:link value="Não sabe o cep?" title="Não sabe cep?" href="http://www.buscacep.correios.com.br/sistemas/buscacep/"  target="_blank" style="font-size: 14px;border: 1px solid gray;padding: 5px;"/>
+                        </h:panelGroup>
+
+                        <h:outputText value="RUA-"/>
+                        <p:inputText id="rua" size="60" disabled="true" />
+
+                        <h:outputText value="BAIRRO-"/>
+                        <p:inputText  id="bairro" size="60" disabled="true"/>
+
+                        <h:outputText value="CIDADE-"/>
+                        <p:inputText id="cidade" size="60" disabled="true" />
+
+                        <h:outputText value="ESTADO-"/>
+                        <p:inputText id="uf" size="5" disabled="true" />
+
+                    </h:panelGrid>
+
+                </h:form>
+            </div>    
+        </div>
+
+
+    </h:body>
+</html>
+
