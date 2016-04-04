@@ -7,8 +7,7 @@
     <h:head>
         <title>Facelet Title</title>
         <h:outputScript library="js" name="cep.js"/>        
-        <h:outputStylesheet library="css" name="css.css"/>
-
+        <h:outputStylesheet library="css" name="css.css"/>       
     </h:head>
 
 
@@ -18,7 +17,14 @@
                 PF('geoMap').geocode(document.getElementById('address').value);
             }
         </script>
-
+        <script async="true" defer="true" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZiFconlkX4lv9MKcXQo-BkQX9-QY-L0w&callback;=initMap"></script>
+<!--
+CHAVES
+AIzaSyCZiFconlkX4lv9MKcXQo-BkQX9-QY-L0w
+AIzaSyAWMM38dR6Rg50ts6aDNXUaDFZpEI1G1As
+GUIA
+https://developers.google.com/maps/documentation/javascript/tutorial?authuser=1&hl=pt-br#HTML5
+-->
         <div style="margin: auto; width: 60%;">
             <div align="center">
                 <h:form prependId="false">
