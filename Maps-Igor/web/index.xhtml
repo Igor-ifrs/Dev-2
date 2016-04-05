@@ -3,7 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:of="http://omnifaces.org/functions"
+      xmlns:o="http://omnifaces.org/ui">
+      
+      
     <h:head>
         <title>Facelet Title</title>
         <h:outputScript library="js" name="cep.js"/>        
@@ -12,12 +16,13 @@
 
 
     <h:body>
+       
         <script type="text/javascript">
             function geocode() {
                 PF('geoMap').geocode(document.getElementById('address').value);
             }
         </script>
-        <script async="true" defer="true" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZiFconlkX4lv9MKcXQo-BkQX9-QY-L0w&callback;=initMap"></script>
+        <script async="true" defer="true" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWMM38dR6Rg50ts6aDNXUaDFZpEI1G1Asw&callback;=initMap"></script>
 <!--
 CHAVES
 AIzaSyCZiFconlkX4lv9MKcXQo-BkQX9-QY-L0w
@@ -28,7 +33,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial?authuser=1&
         <div style="margin: auto; width: 60%;">
             <div align="center">
                 <h:form prependId="false">
-
+                    <p:link outcome="mapa.html" value="MAPA HTML E JAVASCRIPT GOOGLEAPI"/>
                     <p:panelGrid columns="2">
                         <f:facet name="header" >
                             Demonstração Mapa e autocomplete Jquey
